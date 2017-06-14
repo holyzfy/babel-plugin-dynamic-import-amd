@@ -6,12 +6,9 @@
     "test": "test"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "clean": "rimraf lib",
     "test": "npm run lint && npm run tests-only",
     "tests-only": "node_modules/.bin/mocha --require babel-register",
     "lint": "node_modules/.bin/eslint .",
-    "prepublish": "node_modules/.bin/in-publish && node_modules/.bin/safe-publish-latest && npm run build || node_modules/.bin/not-in-publish",
     "version:major": "npm --no-git-tag-version version major",
     "version:minor": "npm --no-git-tag-version version minor",
     "version:patch": "npm --no-git-tag-version version patch",
@@ -20,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/genkgo/babel-plugin-dynamic-import-amd.git"
+    "url": "git+https://github.com/rtasarz/babel-plugin-dynamic-import-amd.git"
   },
   "keywords": [
     "babel",
