@@ -3,6 +3,6 @@ define([], function () {
 
   const MODULE = 'test-module';
 
-  new Promise(resolve => resolve(require([MODULE])));
-  new Promise(resolve => resolve(require([`test-${MODULE}`])));
+  new Promise(resolve => require([MODULE], resolve));
+  new Promise(resolve => require([`test-${MODULE}`], resolve));
 });
