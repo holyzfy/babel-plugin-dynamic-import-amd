@@ -6,7 +6,7 @@ let syntax  = require('babel-plugin-syntax-dynamic-import');
 const TYPE_IMPORT = 'Import';
 
 const buildImport = template(`
-  (new Promise(resolve => resolve(require([SOURCE]))))
+  (new Promise(resolve => require([SOURCE], resolve)))
 `);
 
 module.exports = {
